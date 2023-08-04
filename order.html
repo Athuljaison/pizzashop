@@ -1,0 +1,96 @@
+<!-- This is the beginning of the HTML document -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Meta tags to prevent search engine indexing -->
+    <meta name="description" content="noindex, nofollow">
+    <meta name="robots" content="noindex,nofollow">
+
+    <!-- Title of the webpage displayed in the browser's title bar -->
+    <title>Pizza Order</title>
+
+    <!-- Linking to an external CSS file to style the page -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+    <!-- The header section of the page -->
+    <header class="back">
+        <!-- Logo of the pizza shop -->
+        <div>
+            <img src="img/pizza.png" alt="Logo" class="logo">
+        </div>
+        <!-- Heading for the pizza order page -->
+        <div class="text">
+            <h2>Order pizza</h2>
+        </div>
+    </header>
+
+    <!-- The navigation menu -->
+    <nav>
+        <!-- Links to different pages of the website -->
+        <a href="/">Home</a>
+        <a href="/menu.html">Menu</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+    
+    <!-- The main content of the page -->
+    <main class="main">
+        <!-- Introduction text for the pizza order form -->
+        <h6>Provide the required details below:</h6>
+
+        <!-- The pizza order form -->
+        <form id="order-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <!-- Pizza Size selection -->
+            <h4>Pizza Size:</h4>
+            <label><input type="radio" name="size" value="small" required>Small</label>
+            <label><input type="radio" name="size" value="medium" required>Medium</label>
+            <label><input type="radio" name="size" value="large" required>Large</label>
+            <label><input type="radio" name="size" value="xlarge" required>X-Large</label>
+
+            <!-- Toppings selection -->
+            <h4>Toppings:</h4>
+            <label><input type="checkbox" name="toppings[]" value="pepperoni">Pepperoni</label>
+            <label><input type="checkbox" name="toppings[]" value="mushrooms">Mushrooms</label>
+            <label><input type="checkbox" name="toppings[]" value="pineapple">Pineapple</label>
+            <label><input type="checkbox" name="toppings[]" value="meat">Meat</label>
+            <label><input type="checkbox" name="toppings[]" value="olives">Olive</label><br>
+
+            <!-- Delivery Method selection using dropdown -->
+            <div class="dropdown">
+                <label>Delivery Method:</label>
+                <select name="delivery-method" required>
+                    <option value="">Select an option</option>
+                    <option value="delivery">Delivery</option>
+                    <option value="takeout">Takeout</option>
+                </select>
+            </div>
+
+            <!-- Additional comments -->
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea><br>
+
+            <!-- Submit button to place the pizza order -->
+            <button type="submit">Order</button>
+        </form>
+    </main>
+
+    <!-- The footer section of the page -->
+    <footer>
+        <!-- Copyright notice with the current year and the pizza shop name -->
+        <p>&copy; 2023 pizza shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
